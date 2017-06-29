@@ -1,0 +1,41 @@
+body .mobile{display:block}
+body .desktop{display:none}
+
+body #back-top {
+      display: block;
+}
+#outer-wrapper #header {
+    
+}
+
+.container .grid .photo {
+    width:100%;
+    margin-bottom:25px;
+    float: none;
+}
+/*.menu {
+    background-color: #d10087;
+    width: 80px;
+    height: 80px;
+    float: right;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    display: table-cell; 
+}*/
+
+.menu #nav-toggle {
+    right: 48px;
+    top: 42px;
+}
+
+.container .grid .photo .bunney {
+    left: -13%;
+    top: -142px;
+    background-size: 70px;
+}
+.container .grid .photo:hover .bunney {
+   transform: rotate(0deg) translate(4px, 21px);
+}
+#outer-wrapper  #squirrel {
+    background-size: cover;
+}

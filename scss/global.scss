@@ -1,0 +1,648 @@
+@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy";
+@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/breakpoint-2.5.0/stylesheets/breakpoint"; 
+
+$max-width:720px;
+$patrick:'Patrick Hand', cursive;
+
+@import "hamburger";
+@media only screen and (max-width: $max-width) {
+	@import "mobile";
+}
+
+.altText {display:none;}
+.preLoadImg, .showOnLoad {display:none}
+
+/*________________ Default Styles ___________________*/
+.desktop{display:block}
+.mobile{display:none}
+.circle {
+    width: 54px;
+    height: 54px;
+    background: url(../img/gif/road.jpg) no-repeat;
+    background-size: cover;
+    border: 2px solid #fff;
+    z-index: 1414;
+    margin-top: 7px;
+    position: relative;
+    border-radius: 100%;
+}
+#hamburger {
+    position: absolute;
+    right: 1em;
+    top: 0em;
+}
+*
+{
+    margin:0px;
+    padding:0px;
+}
+html,body
+{
+    height:100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    position:relative;
+    font-size: 100%;
+    font: inherit;
+}  
+
+a
+{
+    text-decoration:none;
+    outline:none;
+	cursor:pointer;
+	color: #767676;
+}
+
+a * {
+	cursor: pointer;
+}
+
+img
+{
+    border:none;
+	 vertical-align: middle;
+}
+p
+{
+    margin:3px 0 3px 0;
+}
+ul
+{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+fieldset
+{
+    border:none;
+    padding:0px;
+    margin:0px;
+}
+label
+{
+    font-size:100%;
+}
+select,input
+{
+    color:#000;
+	background-color: transparent;
+}
+form
+{
+   padding:0px;
+   margin:0px;
+}
+
+.hidden
+{
+   text-indent: -999px;
+   display: none;    
+}
+
+.clear
+{
+   clear: both;  
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0px;
+    padding: 0px;
+	font: inherit;
+}
+
+.bullets li
+{
+    display:list-item;
+    list-style-type:disc;
+    margin:3px 0 0 15px;
+    list-style-position:outside;
+}
+#outer-wrapper {
+    width:100%;
+    position: relative;
+    background: rgba(208, 212, 213, 0.13)/*#fff6d1*/;
+
+    /*padding: 50px 0;*/
+}
+#outer-wrapper .inner-wrapper {
+    background: rgba(208, 212, 213, 0.13);
+    position: relative;
+}
+.container {
+    width:80%;
+    position: relative;
+    margin: 50px auto;
+    z-index: 3000;
+}
+/*#header {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: #5becec;
+    border-bottom: 8px solid darkturquoise;
+    border-top: 8px solid darkturquoise;
+    text-align: center;
+    font-family: $patrick;
+}*/
+#header {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    background: url(../img/gif/02.png) repeat-x;
+    background-size: 130px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    background-size: contain;
+    background-position-x: 0px;
+    /* background-position-x: 200px; */
+    transition: all 10s ease-in-out;
+    -webkit-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -moz-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -o-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+#sun {
+    height: 150px;
+    margin-left: 70%;
+    background: url(../img/gif/05.png) no-repeat;
+   /* background-size: 130px;*/
+    background-size: contain;
+    position: relative;
+    z-index: -1;
+   -webkit-animation: sun 5s; /* Safari 4.0 - 8.0 */
+    animation: sun 5s;
+}
+@-webkit-keyframes sun {
+    to  {
+        top: 0px;
+    }
+    from {
+        top: 200px;
+    }
+   /* 51% {
+        top: 50px;
+    }
+    100%  {
+        top: 100px;
+    }*/
+}
+.cloud {
+    height: 100px;
+    width: 100%;
+    top: 0;
+    background: url(../img/gif/c02.png) no-repeat;
+    /* margin-left: 60%; */
+    left: 0;
+    right: 0;
+    /* background-size: 130px; */
+    background-size: contain;
+    position: absolute;
+   /* z-index: 99;*/
+    /* animation-duration: 30s; */
+    opacity: .95;
+    -webkit-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -moz-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -o-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+.cloud.medium {
+    background: url(../img/gif/c03.png) no-repeat;
+    top: 65px;
+    /* margin-right: 16%; */
+    /*z-index: -1;*/
+    width: 40%;
+    left: 70%;
+    float: right;
+    opacity: .75;
+}
+.cloud.small {
+   background: url(../img/gif/01.png) no-repeat;
+    top: 65px;
+    /* right: 5%; */
+    /* margin-left: 31%; */
+    width: 60%;
+    left: 40%;
+   /* z-index: -1;*/
+    opacity: .8;
+}
+.grass {
+    height: 77px;
+    background: url(../img/gif/11.png) repeat-x;
+    /*background-size: 130px;*/
+    background-size: contain;
+    -webkit-animation: moveGrass 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -moz-animation: moveGrass 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -o-animation: moveGrass 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+#road {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    /*background: linear-gradient(to bottom, #fff6d1 -50%, #ab5922 53%, #dbecf9 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15479d', endColorstr='#dbecf9',GradientType=0 );*/
+    background:url(../img/gif/road.jpg) repeat-x;
+    background-size: cover;
+}
+.waves {
+    /*height: 217px;
+    width: 150px;
+    top: -81px;
+    right: 20%;
+    position: absolute;
+    background: url(../img/gif/boat.png) no-repeat;
+    background-size: 130px;*/
+    height: 217px;
+    width: 100%;
+    top: -46px;
+    left: 0;
+    position: relative;
+    background: url(../img/gif/enfant2.gif) no-repeat;
+    background-size: 182px;
+    -webkit-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -moz-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -o-animation: moveCloud 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+.kite {
+    height: 300px;
+    width: 100%;
+    top: -462px;
+    left: 0px;
+    position: relative;
+    background: url(../img/gif/kite24.gif) no-repeat;
+    background-size: 150px;
+    -webkit-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -moz-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+    -o-animation: moveMountain 20s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+.bunney {
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    left: -21%;
+    top: -120px;
+    background: url(../img/gif/20.png) no-repeat;
+    background-size: 95px;
+    /*z-index: -1;*/
+    /*transform: rotate(-33deg);*/
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-33deg) translate(4px, 100px);
+}
+
+#train {
+    background: url(../img/gif/train6.gif) no-repeat;
+    background-size: contain;
+}
+
+#outer-wrapper #road .grass {
+        /* padding-top: 23px; */
+    width: 100%;
+    /* background-size: 300px; */
+    position: absolute;
+    top: 26%;
+}
+
+@-webkit-keyframes moveGrass {
+    0%  {
+        background-position-x: -400px;
+    }
+    100%  {
+        background-position-x: 400px;
+    }
+}
+@-webkit-keyframes moveMountain {
+    0%  {
+        background-position-x: 200px;
+    }
+    100%  {
+        background-position-x: 600px;
+    }
+}
+@-webkit-keyframes moveCloud {
+    0%  {
+        background-position-x: 0%;
+    }
+    100%  {
+        background-position-x: 100%;
+    }
+}
+/*@-moz-keyframes moveclouds {
+ 0%     {margin-right: 0px;}
+  25%   {margin-right: 50px;}
+  50%   {margin-right: 100px;}
+  75%   {margin-right: 150px;}
+  100%  {margin-right: 0px;}
+}
+@-o-keyframes moveclouds {
+ 0%     {margin-right: 0px;}
+  25%   {margin-right: 50px;}
+  50%   {margin-right: 100px;}
+  75%   {margin-right: 150px;}
+  100%  {margin-right: 0px;}
+ 
+}*/
+#outer-wrapper .logo {
+    width: 100%;
+    text-align: center;
+    /*background: #00ced1;*/
+    background: url(../img/gif/banner.jpg) repeat-x;
+    background-size: cover;
+    vertical-align: top;
+    padding: 30px 0;
+    font-size: 36px;
+    color:#fff;
+    font-family:'Patrick Hand', cursive;
+    margin-top: 30px;
+    box-shadow: 10px 6px 12px rgba(0, 0, 0, 0.83);
+}
+/*#header #logo {
+    font-size: 42px;
+    color: #ff3be7;
+    margin-top: 25px;
+    text-shadow: 1px 2px 2px #fff;
+    width: 80%;
+    float: left;
+}*/
+.funny {
+    height: 170px;
+    background: url(../img/gif/laptop_dog.gif) no-repeat;
+    background-size: 130px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:transform .8s ease-in-out;
+}
+.funny:hover {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+.baby {
+    width: 10%;
+    float: left;
+    position: relative;
+}
+.baby img {
+    width:100%;
+}
+.btn {
+   /* padding: 10px 30px;
+    background: #ff6a00;
+    border: 0;
+    box-shadow: 1px 1px 1px #564235;*/
+    width: 130px;
+    border: 2px solid #000;
+    position: relative;
+    /*top: 100%;*/
+    cursor: pointer;
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+}
+.btn img {
+    width: 100%;
+    cursor: pointer;
+}
+.btn .overlay {
+    background:#ff6a00;
+}
+
+/*_______NAV________*/
+#header .menu .nav li {
+    padding: 10px 0;
+    border-top: 1px solid #00ced1;
+    /* border-collapse: collapse; */
+    background: #5becec;
+    font-family:$patrick;
+}
+#header .menu .nav li a {
+    color: #fff;
+    font-size: 24px;
+    font-family:$patrick;
+}
+/*________________home_________*/
+.grid {
+/*  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 3em;
+  -moz-column-gap: 3em;
+  column-gap: 3em;*/
+
+}
+.grid {
+    width:100%;
+    position:relative;
+}
+.photo {
+   /* margin-bottom:15px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    width:100%;
+    position: relative;
+    display:table;
+    cursor: pointer;*/
+    
+    position: relative;
+    @include gallery(1 of 1); 
+    @include breakpoint($max-width) {
+      @include gallery(1 of 4);
+    }
+}
+.grid .photo {
+    width:(100%/4);
+    position: relative;
+}
+.photo .snap-shot img {
+    width:100%;
+    vertical-align: middle;
+}
+.photo .desc {
+    width:100%; 
+    display:table;
+    background:#ffba89;
+    font-family: $patrick;
+    font-size: 16px;
+
+    padding: 10px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -moz-border-bottom-right-radius:15px;
+    -moz-border-bottom-left-radius:15px;
+}
+.overlay {
+    width: 100%;
+    background: #e72741;
+    /*opacity: 0.7;*/
+    color: #fff;
+    bottom: 0;
+    padding: 8px 0;
+    position: absolute;
+    width:100%; 
+    display:table;
+    text-align: center;
+  /*  background:#ffba89;*/
+  font-family:$patrick;
+
+    /*font-family: 'Josefin Slab', serif;*/
+    font-size: 16px;
+
+}
+/* Circle */
+.grid .photo:hover .bunney {
+   transform: rotate(-33deg) translate(4px, -7px);
+}
+.grid .photo .snap-shot {
+    position: relative;
+    overflow: hidden;
+}
+.grid .photo .snap-shot::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,.2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.grid .photo .snap-shot:hover::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+@keyframes circle {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+.row {
+    margin: 20px 0;
+    position: relative;
+    display: table;
+}
+//TODO this class use in js,bt rt nw it was use in html.
+.hide {
+    display: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+.vision {
+    position: relative;
+    overflow: hidden;
+    width: 105px;
+    border-radius: 5px;
+    z-index: 11;
+    text-align: center;
+    /* box-shadow: inset 0 0 51px rgb(0, 0, 0); */
+    left: 1em;
+    top: 1em;
+}
+.vision:after {
+    clear: both;
+    display: block;
+    content: ''
+}
+.vision div {
+    cursor: pointer;
+    color: #ea0000;
+    font-size: 25px;
+    width: 50%;
+    float: left;
+    /* display: inline-block; */
+    padding: .3em;
+    background: #fdfdfe;
+    box-shadow: inset 0 0 10px #dce0e0;
+}
+
+.vision.active #toggle-button-overlay {
+    left: 50%
+}
+
+div#toggle-button-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background:url(../img/gif/road.jpg) no-repeat;;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15479d', endColorstr='#dbecf9',GradientType=0 );
+    transition: all .15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: none;
+    /* left: 50%; */
+}
+
+.header,.menu {
+    position: relative;
+}
+.header.night {
+   background: url(../img/gif/night-sky.jpg) no-repeat;
+}
+.header.night #sun {
+    background: url(../img/gif/moon.png) no-repeat;
+    background-size: 82px;
+    top: 20px;
+   /* margin-left: 52%;*/
+    z-index: 1;
+    -webkit-animation: moon 5s; /* Safari 4.0 - 8.0 */
+    animation: moon 5s;
+}
+ 
+@-webkit-keyframes moon {
+    to  {
+        top: 0px;
+    }
+    from {
+        top:-50px;
+    }
+}
+
+#footer {
+    width: 100%;
+    position: relative;
+}
+#squirrel {
+    background: url(../img/gif/squirrel.gif) no-repeat;
+    background-size: contain;
+    left: 20px;
+    top: 52%;
+    height: 40px;
+    /* padding-bottom: 20px; */
+    width: 80%;
+    position: absolute;
+}
+#snake{
+    background: url(../img/gif/snake.gif) no-repeat;
+    background-size: contain;
+    height: 100px;
+}
