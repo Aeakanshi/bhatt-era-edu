@@ -9,7 +9,10 @@
 		<link rel="stylesheet" href="css/global.css">
 		<link rel="stylesheet" href="thirdParty/font-awesome/css/font-awesome.css">
 		<script src="thirdParty/jquery-1.11.4.min.js"></script>
-		<!-- <script type="text/javascript" src="js/scroll.min.js"></script> -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Raleway" rel="stylesheet">
+		<script src="thirdParty/bxslider/jquery.bxslider.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="thirdParty/bxslider/jquery.bxslider.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/site-common.dev.js" language="javascript"></script>
 	<!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="ie.css" />
@@ -18,8 +21,131 @@
 	
 	<body>
 		<div id="outer-wrapper"><!--outer-wrapper strat-->
-			
+			<div id="header"><!--header strat-->
+				<!-- <div id="head">
+					<div id="logo"><a><img src="img/logo.jpg"/></a></div><h1><b>B</b>hatt <b>E</b>ra <b>E</b>ducation</h1>
+				</div> -->
+				
+				
+			</div><!--header closed-->
+			<div class="menu"><!--menu strat-->
+				<a  id="nav-toggle" href="#" title="Navigation"><span></span></a> 
+				<div class="nav desktop" id="responsive-nav"><!--nav start-->
+					<ul>
+						<li><a href="home.html "><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+						<li><a href="menu.html"><i class="fa fa-book" aria-hidden="true"></i>Course</a></li>
+						<!-- <li><span>Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></span> 
+							<ul class="sub-nav">
+								<li><a href=" ">Veg</a></li>
+								<li><a href=" ">Non-Veg</a></li>
+							</ul>
+						</li>	 -->
+						<li class="logo">
+							<a>
+								<img src="img/logo.jpg" style="width:150px"/>
+								<h1>
+									<span>Bhatt</span> 
+									<span>Era</span>
+									<span>Education</span>
+								</h1>
+							</a>
+						</li>	
+						<li><a href="#about-us" class="scroll"><i class="fa fa-university" aria-hidden="true"></i>About</a></li>	
+						<li><a href="#contact" class="scroll"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+					</ul>
+				</div><!--nav closed-->
+				<script type="text/javascript" src="js/site-common.dev.js" language="javascript"></script>
+			</div><!--menu closed-->	
+			<div id="inner-wrapper"><!--inner-wrapper start-->
+				<div class="container title"><!--container start-->
+					<a>Registration Open For Session <i class="fa fa-hand-o-right" aria-hidden="true"></i> 2017-18 </a>
+				</div><!--container closed-->
+				<div class="container"><!--container start-->
+					<div class="slider"><!--slider start-->
+						<ul class="bxslider">
+							<li>
+								<a href=" ">
+									<img src="img/slider/01.png" />
+									<div class="bx-caption">
+										<span>THE CENTRE IN MEDIA</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href=" ">
+									<img src="img/slider/02.png" />
+									<div class="bx-caption">
+										<span>CENTRE ON THE DEATH PENALTY</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href=" ">
+									<img src="img/slider/03.png" />
+									<div class="bx-caption">
+										<span>THE CENTRE IN MEDIA</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href=" ">
+									<img src="img/slider/04.png" />
+									<div class="bx-caption">
+										<span>CENTRE IN MEDIA</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<nav class='controls desktop'>
+						    <a id='slider-prev' class='bxPrev circle'>
+						    	<!-- <i class="fa fa-angle-left"></i> -->
+						    </a>
+						    <a id='slider-next' class='bxNext circle'>
+						    	<!-- <i class="fa fa-angle-right"></i> -->
+						    </a>
+						</nav>
+					</div><!--slider closed-->
+					<div id="query-form"><!--query-form start-->
+						<form action="#" method="post" class="mod2">
+							<div class="group-element">
+								<input name="name" type="text" required="">
+								<label class="text">Name :</label>									
+							</div>
+							<div class="group-element">
+								<input name="name" type="text" required="">
+								<label class="text">Email :</label>
+							</div>
+							<div class="group-area">
+								<textarea name="Address"></textarea>
+								<label class="text">INSTRUCTIONS, IF ANY:</label>
+							</div>
+							<!-- <div class="clear"></div> -->
+							<div class="submit">
+								<a href="#" class="button" value="Lets'go">Lets'go</a>
+							</div>
+						</form>
+					</div><!--query-form closed-->
+				</div><!--container closed-->
+				<div class="container"><!--container start-->
+					
+				</div><!--container closed-->
+			</div><!--inner-wrapper closed-->
+
 		</div><!--outer-wrapper closed-->
 		<!-- <p id="back-top" class="desktop"><a href="#top"><span></span</a></p>	 -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//bxslide
+				//$('.bxslider').bxSlider();
+				$('.bxslider').bxSlider({
+				  nextSelector: '#slider-next',
+				  prevSelector: '#slider-prev',
+				  nextText: '<i class="fa fa-angle-right"></i>',
+				  prevText: '<i class="fa fa-angle-left"></i>',
+				  pager: false,
+				stopAutoOnClick: true
+				});
+			});
+		</script>
 	</body>
 </html>
