@@ -1,6 +1,4 @@
-
-
-/*_________________________Hamburger_________________________*/
+/*________Hamburger________*/
 a.open-responsive-panel, a.close-responsive-panel {display: inline;}
 /*Hamburger Animated Mobile Nav Icon*/
 body #responsive-nav  {
@@ -134,10 +132,10 @@ body #responsive-nav  {
     position: relative;
     top: .5em;
     left: 1em; 
-  }	
+  } 
 /*-----------------------------------Hamburger Animated Mobile Nav Icon-----------------------------------*/
 #nav-toggle {
-	cursor: pointer;
+  cursor: pointer;
 /*padding: 9px 26px 16px 0px;*/
   position: absolute;
   left: 12px;
@@ -148,7 +146,7 @@ body #responsive-nav  {
 /*border-radius: 25%;*/
   height: 4px;/*5*/
   width: 25px;
-  background:#ffffff;/*$dark-brown*/
+  background:#5c5c74;/*$dark-brown*/
   position: absolute;
   z-index:11111;
   display: block;
@@ -182,8 +180,6 @@ body #responsive-nav  {
   transform: rotate(-45deg);
 
 }
-
-
 
 
 

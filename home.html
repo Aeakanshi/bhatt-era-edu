@@ -13,27 +13,49 @@
 		<script src="thirdParty/bxslider/jquery.bxslider.js"></script>
 		<!-- bxSlider CSS file -->
 		<link href="thirdParty/bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+		<link href="thirdParty/flexisel-master/css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="thirdParty/flexisel-master/js/jquery.flexisel.js"></script>
+
 		<script type="text/javascript" src="js/site-common.dev.js" language="javascript"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js">/* script async defer */</script>
+   		<script type="text/javascript" src="thirdParty/google-map-markerwithlabel/markerwithlabel.js"></script>	
 	<!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="ie.css" />
 <![endif]-->
 	</head>
+	<style type="text/css">
+   .mrbake {
+     background-color: white;
+     width: 100px;     
+   }
+   .mrbake img {
+     width: 100%;     
+   }
+ </style>
 	
 	<body>
 		<div id="outer-wrapper"><!--outer-wrapper strat-->
 			<div id="header"><!--header strat-->
-				<!-- <div id="head">
-					<div id="logo"><a><img src="img/logo.jpg"/></a></div><h1><b>B</b>hatt <b>E</b>ra <b>E</b>ducation</h1>
-				</div> -->
-				
-				
+				<div class="logo mobile">
+					<a>
+						<img src="img/logo.jpg" style="width:150px"/>
+						<h1>
+							<span>Bhatt</span> 
+							<span>Era</span>
+							<span>Education</span>
+						</h1>
+					</a>
+				</div>			
 			</div><!--header closed-->
 			<div class="menu"><!--menu strat-->
 				<a  id="nav-toggle" href="#" title="Navigation"><span></span></a> 
-				<div class="nav desktop" id="responsive-nav"><!--nav start-->
+				<div class="nav" id="responsive-nav"><!--nav start-->
 					<ul>
-						<li><a href="home.html "><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-						<li><a href="menu.html"><i class="fa fa-book" aria-hidden="true"></i>Course</a></li>
+						<li><a href="home.html " class="scroll"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+						<li><a href="#courses" class="scroll"><i class="fa fa-book" aria-hidden="true"></i>Course</a></li>
+						<li><a href="#services" class="scroll"><i class="fa fa-book" aria-hidden="true"></i>Services</a></li>
 						<!-- <li><span>Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></span> 
 							<ul class="sub-nav">
 								<li><a href=" ">Veg</a></li>
@@ -49,7 +71,8 @@
 									<span>Education</span>
 								</h1>
 							</a>
-						</li>	
+						</li>
+						<li><a href="#gallery" class="scroll"><i class="fa fa-book" aria-hidden="true"></i>Gallery</a></li>	
 						<li><a href="#about-us" class="scroll"><i class="fa fa-university" aria-hidden="true"></i>About</a></li>	
 						<li><a href="#contact" class="scroll"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
 					</ul>
@@ -126,11 +149,113 @@
 						</form>
 					</div><!--query-form closed-->
 				</div><!--container closed-->
+				<div class="container" id="courses"><!--container start-->
+					<div class="head">What Are Our Course's </div>
+					<div class="cards">
+						<div class="card">
+							<div class="info">
+								<div class="name">Acadmic Courses</div>
+								<div class="photo">
+									<a>
+										<img src="img/01.jpg"/>
+										<div class="band">
+											<label>
+												Class X - XI - XII <br/><br/>
+												Maths, Physics
+												<br/><br/>
+												Chemistry, Biology, Accounts,
+												<br/><br/>
+												Stats, Business St. Eco.
+												<br/><br/>
+											</label>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="info">
+								<div class="name">Computer Courses</div>
+								<div class="photo">
+									<a>
+										<img src="img/01.jpg"/>
+										<div class="band">
+											<label>
+												Class X - XI - XII <br/><br/>
+												Maths, Physics
+												<br/><br/>
+												Chemistry, Biology, Accounts,
+												<br/><br/>
+												Stats, Business St. Eco.
+												<br/><br/>
+											</label>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="info">
+								<div class="name">Competative Courses</div>
+								<div class="photo">
+									<a>
+									<img src="img/01.jpg"/>
+									<div class="band">
+										<label>
+											Class X - XI - XII <br/><br/>
+											Maths, Physics
+											<br/><br/>
+											Chemistry, Biology, Accounts,
+											<br/><br/>
+											Stats, Business St. Eco.
+											<br/><br/>
+										</label>
+									</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div><!--container closed-->
+				<div class="container" id="gallery"><!--container start-->
+					<div class="head">Glimps</div>
+					<div class="cards">
+						<ul id="flexiselDemo">
+						    <li>
+						    	<div><img src="img/01.jpg"/></div>
+						    </li>
+						    <li>
+						    	<div><img src="img/01.jpg"/></div>
+						    </li>
+						   <li>
+						   	<div><img src="img/01.jpg"/></div>
+						   </li>
+						    <li>
+						    	<div><img src="img/01.jpg"/></div>
+						    </li> 
+						</ul> 
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="container" id="contact"><!--container start-->
+					<div class="head">Our Location</div>
+					<div id="map">
+						<div id="googleMap" style="height:410px"></div>
+					</div>	
+					<div class="addr">
+						<h3>Visit Us</h3>
+						<div class="line"></div>
+						<p>Shop No. 5, L-96, Subhraj Complex, Labour Chowk,<br/> Mahilpalpur, Block E,<br/> Mahipalpur Village, Mahipalpur,<br/> New Delhi, Delhi 110037</p>
+					</div>
+				</div><!--container closed-->
+				
+			</div><!--inner-wrapper closed-->
+			<div id="footer">
 				<div class="container"><!--container start-->
 					
 				</div><!--container closed-->
-			</div><!--inner-wrapper closed-->
-
+			</div>
 		</div><!--outer-wrapper closed-->
 		<!-- <p id="back-top" class="desktop"><a href="#top"><span></span</a></p>	 -->
 		<script type="text/javascript">
@@ -145,7 +270,64 @@
 				  pager: false,
 				stopAutoOnClick: true
 				});
+
+				//flexisel carousel
+				 $("#flexiselDemo").flexisel({
+			        visibleItems: 3,
+			        itemsToScroll: 3,
+				    animationSpeed: 400,
+				    infinite: true,
+				    navigationTargetSelector: null,      
+			        autoPlay: {
+		            enable: false,
+		            interval: 5000,
+		            pauseOnHover: true
+			        }        
+			    });
 			});
+		</script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		<script>
+			 var latLng = new google.maps.LatLng(28.54325382140969,77.12384775280952);
+			 var homeLatLng = new google.maps.LatLng(28.54325382140969,77.12384775280952);
+
+			 var map = new google.maps.Map(document.getElementById('googleMap'), {
+			   zoom: 15,
+			   center: latLng,
+			   mapTypeId: google.maps.MapTypeId.ROADMAP
+			 });
+
+			 var pictureLabel = document.createElement("img");
+			 pictureLabel.src = "img/logo.jpg";
+
+			 var marker = new MarkerWithLabel({
+			   position: homeLatLng,
+			   map: map,
+			   draggable: false,
+			   raiseOnDrag: true,
+			   labelContent: pictureLabel,
+			   labelAnchor: new google.maps.Point(50, 0),
+			   labelClass: "mrbake" // the CSS class for the label
+			   //labelStyle: {opacity: 0.50}
+			 });
+
+			  // InfoWindow content
+	  		var content = '<p>Shop No. 5, L-96</p>'+'<p> Subhraj Complex, Labour Chowk</p>'+'<p> Block E, Mahipalpur Village, Mahipalpur </p>'+'<p>New Delhi, Delhi 110037</p>';
+
+	  		// A new Info Window is created and set content
+			 var infowindow = new google.maps.InfoWindow({
+			   content: content,
+			   maxWidth: 200
+			 });
+			 google.maps.event.addListener(marker, "click", function (e) { infowindow.open(map, this); });	
 		</script>
 	</body>
 </html>
