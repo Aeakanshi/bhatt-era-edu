@@ -359,7 +359,8 @@ h1 {
   backface-visibility: hidden;
   display: block;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /*$opn-sans;*/
   color: #000;
   letter-spacing: 1px;
   padding: 1em 0;
@@ -451,12 +452,9 @@ li:after {
   position: relative; }
 
 #inner-wrapper .container.title {
-  /* padding: 1em 6em;
-   font-family: $raleway;
-   letter-spacing: 1px;*/
   z-index: 1;
   padding: 1em 6em;
-  font-family: "Raleway", sans-serif;
+  /*font-family: $raleway;*/
   letter-spacing: 1px;
   box-shadow: 0 4px 10px rgba(80, 80, 80, 0.39);
   /* margin-bottom: 1em; */
@@ -467,7 +465,8 @@ li:after {
 #inner-wrapper .container.title a {
   color: red;
   /* font-size: 24px; */
-  font-weight: bold; }
+  /*font-weight: bold;*/
+  font-family: "Poppins", sans-serif; }
 
 #inner-wrapper .container.title i {
   color: #00e5ff; }
@@ -476,7 +475,7 @@ li:after {
 .slider .bx-wrapper .bx-caption span {
   font-size: 32px;
   font-weight: bold;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: left;
   padding: .3em 1em; }
 
@@ -551,7 +550,7 @@ form .group-element {
   margin-bottom: 10px;
   height: 46px;
   /*background: ghostwhite;*/
-  font-family: "Raleway", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 form .group-element label, form .group-area label {
   position: absolute;
@@ -572,7 +571,7 @@ input:focus + label, textarea:focus + label {
 .group-area {
   margin-bottom: 10px;
   position: relative;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .group-area textarea {
   width: 96%;
@@ -582,7 +581,7 @@ input:focus + label, textarea:focus + label {
   border: 0;
   border-bottom: 1px solid red;
   background: transparent;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .submit {
   position: relative;
@@ -596,7 +595,7 @@ input:focus + label, textarea:focus + label {
   padding: 15px 25px;
   color: #fff;
   background-color: #0ab2b3;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .button:focus {
   background-color: #0ab2b3; }
@@ -608,10 +607,10 @@ input:focus + label, textarea:focus + label {
   letter-spacing: 1px;
   position: relative;
   font-size: 32px;
-  font-weight: 600;
+  /* font-weight: 600;*/
   color: #5c5c74;
   background: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
   /*'Josefin Sans', sans-serif*/ }
 
 .card {
@@ -660,16 +659,16 @@ input:focus + label, textarea:focus + label {
 .card .name {
   font-size: 20px;
   /* display: none; */
-  font-weight: 600;
+  /* font-weight: 600;*/
   letter-spacing: 1px;
   text-align: center;
   color: #5c5c74;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   /* border-bottom: solid 2px rgba(0, 0, 0, 0.22);*/
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.22);
   z-index: 11;
   position: relative;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 /*.card .photo {
     margin: 2em 0;
@@ -685,22 +684,28 @@ input:focus + label, textarea:focus + label {
   bottom: 0;
   background: rgba(0, 0, 0, 0.76);
   width: 100%;
-  height: 35px;
+  height: 40px;
   text-align: center;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease; }
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .card .photo .band label {
   text-align: center;
   color: #fff;
   display: block;
-  padding: .5em 0;
+  padding: 1em 0;
   font-size: 14px;
   letter-spacing: 1px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .card .photo a:hover .band {
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 /*______crausel_____*/
 .cards .nbs-flexisel-container .nbs-flexisel-inner {
@@ -713,6 +718,21 @@ input:focus + label, textarea:focus + label {
 .nbs-flexisel-item div img {
   max-width: 100%;
   width: 100%; }
+
+.desc h4 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  margin: 1em 0;
+  font-family: "Poppins", sans-serif; }
+
+.desc p {
+  display: block;
+  font-size: 14px;
+  line-height: 2em;
+  text-align: left;
+  position: relative;
+  font-family: "Poppins", sans-serif; }
 
 /*____Map_____*/
 #map {
