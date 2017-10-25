@@ -1,14 +1,15 @@
-@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy";
-@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/breakpoint-2.5.0/stylesheets/breakpoint"; 
+/*@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy";
+@import "C:/installed/ruby22/lib/ruby/gems/2.2.0/gems/breakpoint-2.5.0/stylesheets/breakpoint"; */
 
 
-/*@import "C:/installed/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy";
-@import "C:/installed/Ruby22-x64/lib/ruby/gems/2.2.0/gems/breakpoint/stylesheets/breakpoint"; */
+@import "C:/installed/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy";
+@import "C:/installed/Ruby22-x64/lib/ruby/gems/2.2.0/gems/breakpoint/stylesheets/breakpoint"; 
 
 $mobile-width:1150px;
 $max-width:720px;
 $red:#e65858;
 $pink:#f84279;
+$purple:#5c5c74;
 $blue:#00e5ff;/*#80d8ff;*/
 $opn-sans:'Open Sans', sans-serif;
 $raleway:"Raleway", sans-serif;
@@ -298,18 +299,26 @@ li:after {
 }
 /*__Home__*/
 .slider .bx-wrapper .bx-caption span {
-    font-size:32px;
-    font-weight:bold;
-    font-family:$poppins;
+    color: #fff;
+    font-size: 28px;
     text-align: left;
-    padding: .3em 1em;
+    padding: 1em;
+    letter-spacing: 1px;
+    position: absolute;
+    font-weight: bold;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    /* padding: .3em 1em; */
 }
 .slider .bx-wrapper .bx-caption {
-    top:100px;
+    top: 0;
     position: absolute;
     left: 0;
-    bottom:inherit;
-    background: #666;
+    bottom: inherit;
+    border-bottom: 5em solid rgba(102, 51, 153, 0.49);
+    border-left: 0em solid transparent;
+    border-right: 2.5em solid transparent;
+   /* background: #666;*/
     /* background: transparent; */
     width: 40%;
 }
@@ -426,6 +435,10 @@ input:focus + label ,textarea:focus + label {
 .button:focus {
     background-color:#0ab2b3;
 }
+.cards {
+    background: #fff;
+    padding: 1em 0;
+  }  
 /*__________*/
 .head {
     padding: 2em 0 1em 0;
@@ -434,53 +447,147 @@ input:focus + label ,textarea:focus + label {
     position: relative;
     font-size: 32px;
    /* font-weight: 600;*/
-    color: #5c5c74;
+    color:$purple;
     background: #fff;
     font-family:$poppins;/*'Josefin Sans', sans-serif*/
 }
-.card {
+
+.container#courses {
+    background:#fff;
+}
+
+.container#courses .cards {
+    /*background: #fff;
+    padding: 1em 0;*/
+    max-width: 80%;
+    margin: 0 auto;
+    }
+.cards .card {
     @include gallery(1 of 2);
         @include breakpoint($max-width) {
             @include gallery(1 of 3);
         }
-    }
-.cards {
-    background: #fff;
-    padding: 1em 0;
-    }
-.card .info {
-    margin: 0 2em;
-    position: relative;
-    background: #f9fafa;
-    padding: 1em 0 0 0;
-    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.13);
-    border: solid 1px rgba(32, 32, 32, 0.13);
+} 
+.cards .card {
     overflow: hidden;
 }
-.card .name {
-    font-size: 20px;
-    /* display: none; */
-   /* font-weight: 600;*/
-    letter-spacing: 1px;
-    text-align: center;
-    color: #5c5c74;
-    padding-bottom: .5em;
-   /* border-bottom: solid 2px rgba(0, 0, 0, 0.22);*/
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.22);
+.card .info {
+    margin:0 0.6em;
+    position: relative;
+    background: #ffffff;
+    padding: 0 0 0 0;
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.05);
+    border: solid 1px rgba(170, 170, 170, 0.13);
+    /*overflow: hidden;*/
+    border-bottom: solid 5px rgba(174, 33, 197, 0.74);
+}
+
+.cards .card .info h1 {
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    color: white;
     z-index: 11;
-    position: relative;
-    font-family: $poppins;
+    text-align: center;
+    top: 3%;
+    text-shadow: 2px 0px 4px #000;
+    margin: 0 1em;
+    left: 0;
+    right: 0;
 }
-/*.card .photo {
-    margin: 2em 0;
-}*/
-.card .photo{
-    position: relative;
+.card .info .photo span {
+    display: block;
 }
-.card .photo img {
+.card .info .photo span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 51, 153, 0.49);
+}
+.card .info .photo {
+    position: relative;
+    overflow: hidden;
+}
+.card .info .photo:after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    bottom: 0;
+    height: 100px;
+    background: #ffffff;
+    transform: rotate(-10deg) translate(-30px, 57px);
+    box-shadow: inset 0px 0 10px rgba(0, 0, 0, 0.62);
+}
+.card .info .photo img {
     width: 100%;
 }
-.card .photo .band {
+.card .info .band {
+        position: relative;
+    /* padding: 2em; */
+    color: #5c5c74;
+}
+.band-content {
+    padding: 2em;
+}
+.band-content ul li {
+    padding:.5em 0;
+    letter-spacing: 1px;
+    font-size: 15px;  
+}
+
+.band-content ul li b {
+    border-bottom: dashed 1px #d080dd;
+    display: block;
+    padding-bottom: .5em;
+    padding-right: 1em;
+    font-size: 16px;
+    font-style: italic;
+     color: #c25ad3;
+    font-weight: normal;
+    /*color: #c25ad3;*/
+}
+
+.card .info .controls {
+    text-align: right;
+    padding-right: 0.5em;
+    padding-bottom: 1em;
+}
+.card .info .controls a {
+    display: inline-block;
+    padding: .5em 1em;
+    /* border: solid 1px #9b3baa; */
+    background: #d080dd;
+    color: white;
+    border-bottom: solid 4px #c25ad3;
+    /* border-right: solid 4px #c25ad3; */
+    /* margin-right: 0em; */
+    margin-right: -1em;
+}
+.band .band-header {
+   /*background: #fff; */
+    transform: rotate(-10deg) translate(0px, -1.1em);
+    background: #80ddc4;
+    text-align: center;
+    border-bottom-left-radius: 0;
+    /* border-radius: 5px; */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 2px;
+    margin-left: -28px;
+    margin-right: -2em;
+    font-size: 18px;
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.05);
+    border: solid 1px rgba(170, 170, 170, 0.13);
+    position: absolute;
+    /* z-index: 9999 !important; */
+    color: white;
+    overflow: visible;
+    width: 119%;
+    padding: .3em 0;
+}
+/*.card .photo .band {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.76);
@@ -507,7 +614,7 @@ input:focus + label ,textarea:focus + label {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-}
+}*/
 
 /*______crausel_____*/
 .cards .nbs-flexisel-container .nbs-flexisel-inner {
@@ -522,20 +629,22 @@ input:focus + label ,textarea:focus + label {
     max-width: 100%;
     width: 100%;
    } 
+.desc {
+    color:#5c5c74;
+    font-family:$poppins;
+    text-align: left;
+}
 .desc h4 {
     font-size: 16px;
     font-weight: bold;
-    text-align: left;
     margin: 1em 0;
-    font-family:$poppins;
+    
 }
 .desc p {
-    display: block;
+    /*display: block;*/
     font-size: 14px;
     line-height: 2em;
-    text-align: left;
     position: relative;
-    font-family:$poppins;
 }
 
  /*____Map_____*/

@@ -6,7 +6,7 @@ body .desktop{display:none}
     margin:0 auto;
 }
 
-.cards .card {
+#inner-wrapper .cards .card {
     width:100%;
     float:none;
     margin-left:0 !important;
@@ -31,4 +31,7 @@ body #responsive-nav .logo {
 #inner-wrapper .container #query-form {
     position:relative;
     width:100%;
+}
+#outer-wrapper #inner-wrapper .container.title {
+    padding:1em 3em;
 }
