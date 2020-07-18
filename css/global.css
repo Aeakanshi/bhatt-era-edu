@@ -566,6 +566,7 @@ form .group-element {
 form .group-element label, form .group-area label {
   position: absolute;
   top: 30%;
+  left:0;
   -webkit-transition: .25s ease;
   -moz-transition: .25s ease;
   -o-transition: .25s ease;
